@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import {Provider} from "react-redux";
+// Components
+import App from "./App.js";
+// Redux store
+import {store} from "./services/redux/store/store";
+// Redux thunk
+import {fetchJobs} from "./services/redux/slices/jobs/jobsSlice";
+import GlobalStyles from "./assets/globalStyles/globalStyle";
+
+// Fetch jobs when page loads
+store.dispatch(fetchJobs());
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Provider store={store}>
+        <GlobalStyles/>
+        <App/>
+    </Provider>,
+    document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
