@@ -67,6 +67,11 @@ const StyledInputWrapper = styled.div`
   position: center;
   text-align: center;
   display: block;
+  
+  Input{
+    width: 80%;
+  }
+  
 `;
 
 const StyledMainWrapper = styled.div`
