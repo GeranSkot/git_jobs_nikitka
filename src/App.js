@@ -1,9 +1,9 @@
 import React from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-// Views
+
 import Main from "./pages/Main";
 import JobPage from "./pages/JobPage";
-// Components
+
 import Logo from "./components/Logo/Logo";
 import Footer from "./components/Footer/Footer";
 import styled from 'styled-components';

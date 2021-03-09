@@ -4,11 +4,10 @@ import styled from 'styled-components';
 const Rejected = () => {
     return (
         <StyledRejected>
-            <h1>Upss! Something went wrong. Please check back later</h1>
+            <h1>ОПА БЛЯ, ШОСЦИ СЛУЧЫЛАСЯ</h1>
             <h3>
-                If this takes longer than 1 hour, please open an&nbsp;
-                <a href="https://www.youtube.com/watch?v=NdqbI0_0GsM">issue</a> to
-                inform us.
+                Ну кароч пизда, все, приехали. 403 лови бро. заходи на url и разблокируй, смотри консоль&nbsp;
+                <a href="https://www.youtube.com/watch?v=NdqbI0_0GsM">(КЛИКНИ МЕНЯ)</a> к просмотру обязательно.
             </h3>
         </StyledRejected>
     );
@@ -24,9 +23,10 @@ const StyledRejected = styled.div`
       min-width: 350px;
       h3 {
         margin-top: 35px;
-
+        
         a {
           color: white;
+          font-size: 2.8rem;
         }
       }
 `;

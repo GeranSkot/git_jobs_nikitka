@@ -41,12 +41,12 @@ const JobPage = () => {
             <StyledJobWrapper>
                 <h2>{job.title}</h2>
 
-                <button className="transparent-button" style={{marginTop: "5px"}}>
+                <button>
                     {job.type}
                 </button>
 
                 <StyledGrayLabel>
-                    <i className="far fa-clock"></i>
+                    <i className="far fa-clock"/>
                     {job.created_at.split(" ").join(" ")}
                 </StyledGrayLabel>
 
@@ -64,7 +64,7 @@ const JobPage = () => {
                         <StyledInfo>
                             <p>{job.company}</p>
                             <StyledGrayLabel>
-                                <i className="fas fa-globe-europe"></i>
+                                <i className="fas fa-globe-europe"/>
                                 {job.location}
                             </StyledGrayLabel>
                         </StyledInfo>
@@ -129,6 +129,18 @@ const StyledJobWrapper = styled.div`
         font-size: 1.8rem;
         color: #334680;
         font-weight: 700;
+      }
+      button{
+          border: 1px;
+          border-radius: 4px;
+          font-size: 1.4rem;
+          margin: 10px 0 0 0;
+          cursor: pointer;
+          font-weight: 500;
+          opacity: 0.75;
+          color: #334680;
+          background-color: transparent;
+          padding: 5px 5px;
       }
 `;
 

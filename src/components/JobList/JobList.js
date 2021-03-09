@@ -28,7 +28,6 @@ const JobList = ({
         setJobs(jobsSelector);
     }, [jobsSelector]);
 
-    // Handle what jobs are displayed
     useEffect(() => {
         const {items: paginatedJobs, pages} = paginate(jobs, currentPage);
 

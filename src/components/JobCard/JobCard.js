@@ -19,26 +19,25 @@ const JobCard = ({
         <StyledWrapper>
             <StyledPositionInfo>
                 <StyledLogo>
-                    <img src={companyLogo} alt="not found" height="90px" width="90px"/>
+                    <img src={companyLogo} alt="not found"/>
                 </StyledLogo>
                 <StyledPositionDetails>
                     <h5>{company}</h5>
                     <Link to={"/" + id}>
                         <h2>{title}</h2>
                     </Link>
-
-                    <button className="transparent-button">{type}</button>
+                    <button>{type}</button>
                 </StyledPositionDetails>
             </StyledPositionInfo>
 
             <StyledApplicationInfo>
                 <div className="location">
-                    <i className="fas fa-globe-europe"></i>
+                    <i className="fas fa-globe-europe"/>
                     {location}
                 </div>
 
                 <div className="created">
-                    <i className="far fa-clock"></i>
+                    <i className="far fa-clock"/>
                     {created_at.join(" ")}
                 </div>
             </StyledApplicationInfo>
@@ -51,7 +50,7 @@ const StyledWrapper = styled.div`
   width: 100%;
   background: #fff;
   padding: 12px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   flex-direction: column;
   justify-content: left;
   margin-top: 25px;
@@ -77,7 +76,9 @@ const StyledLogo = styled.div`
       margin-top: 0;
       img {
         line-height: 90px;
-        object-fit: cover;
+        object-fit: contain;
+        height: 90px; 
+        width: 90px;
       }
 `;
 
@@ -98,6 +99,17 @@ const StyledPositionDetails = styled.div`
         font-weight: 400;
         margin-top: 8px;
         text-decoration: none;
+      }
+      button{
+          border: 1px;
+          border-radius: 4px;
+          font-size: 1.4rem;
+          margin: 10px 0 0 0;
+          cursor: pointer;
+          font-weight: 500;
+          opacity: 0.75;
+          color: #334680;
+          
       }
 `;
 
