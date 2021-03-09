@@ -1,5 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
+import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
     currentPage = Number(currentPage);
@@ -36,18 +39,18 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
     return (
         <StyledPaginationButtons>
             <button
-                onClick={(e) => {
+                onClick={() => {
                     setCurrentPage(currentPage - 1);
                 }}
                 disabled={currentPage < 2 && "disabled"}
             >
-                <i className="fas fa-chevron-left"></i>
+                <FontAwesomeIcon icon={faChevronLeft}/>
             </button>
 
             {buttons().map((pageNumber) => {
                 if (pageNumber === "dots") {
                     return (
-                        <StyledDots key={pageNumber} className="fas fa-ellipsis-h"></StyledDots>
+                        <StyledDots key={pageNumber}/>
                     );
                 }
 
@@ -65,7 +68,7 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
             })}
 
             <button
-                onClick={(e) => {
+                onClick={() => {
                     setCurrentPage(currentPage + 1);
                 }}
                 disabled={
@@ -73,7 +76,8 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
                     (currentPage + 1 > pagesCount && "disabled")
                 }
             >
-                <i className="fas fa-chevron-right"></i>
+                <FontAwesomeIcon icon={faChevronRight}/>
+
             </button>
         </StyledPaginationButtons>
     );
@@ -94,14 +98,23 @@ const StyledPaginationButtons = styled.div`
       color: #b9bdcf;
       transition: all 0.1s;
       cursor: pointer;
+      
+      &:hover{
+        color: #1e86ff;
+        border: 1px solid #1e86ff;
+      }
+      
+    }
+    .active{
+      background-color: #1e86ff;
+      color: #fff;
     }
 `;
 
 const StyledDots = styled.i`
-  font-size: 1.8rem;
+      font-size: 1.8rem;
       color: #b9bdcf;
-      padding: 0 14px;
-      margin-left: 12px;
+      background-color: #334680;
 `;
 
 export default Pagination;

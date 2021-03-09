@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../Button/Button";
 import styled from 'styled-components';
 
+
 const Input = ({
                    placeholder,
                    icon,
@@ -15,7 +16,7 @@ const Input = ({
         if (icon) {
             return (
                 <React.Fragment>
-                    <StyledIcon className={icon}></StyledIcon>
+                    <StyledIcon className={icon}/>
                 </React.Fragment>
             );
         }
@@ -53,7 +54,7 @@ const Input = ({
 const StyledInputGroup = styled.div`
   input {
     border: 0;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px 40px;
     width: 50vh;
     border-radius: 4px;

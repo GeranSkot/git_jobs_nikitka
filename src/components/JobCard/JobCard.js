@@ -1,6 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import styled from 'styled-components';
+import {faClock, faGlobeEurope} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const JobCard = ({
                      companyLogo,
@@ -32,12 +34,12 @@ const JobCard = ({
 
             <StyledApplicationInfo>
                 <div className="location">
-                    <i className="fas fa-globe-europe"/>
+                    <FontAwesomeIcon icon={faGlobeEurope}/>
                     {location}
                 </div>
 
                 <div className="created">
-                    <i className="far fa-clock"/>
+                    <FontAwesomeIcon icon={faClock}/>
                     {created_at.join(" ")}
                 </div>
             </StyledApplicationInfo>
@@ -101,15 +103,14 @@ const StyledPositionDetails = styled.div`
         text-decoration: none;
       }
       button{
-          border: 1px;
+          border: 1px solid #334680;
           border-radius: 4px;
           font-size: 1.4rem;
           margin: 10px 0 0 0;
           cursor: pointer;
           font-weight: 500;
           opacity: 0.75;
-          color: #334680;
-          
+          color: #334680;   
       }
 `;
 

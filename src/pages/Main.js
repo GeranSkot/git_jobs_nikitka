@@ -8,6 +8,7 @@ import {store} from "../services/redux/store/store.js";
 
 import {fetchJobs} from "../services/redux/slices/jobs/jobsSlice";
 import styled from 'styled-components';
+import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
 
 const Main = () => {
     const [description, setDescription] = useState("");
@@ -28,9 +29,8 @@ const Main = () => {
             <StyledInputWrapper>
                 <Input
                     placeholder="Title, companies, expertise or benefits"
-                    icon="fas fa-briefcase"
+                    icon={faBriefcase}
                     buttonText="Search"
-                    extraButtonClass="input-button"
                     onButtonClick={searchData}
                     onChange={(e) => {
                         setDescription(e.target.value);

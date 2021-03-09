@@ -6,6 +6,8 @@ import {selectJobById} from "../services/redux/slices/jobs/jobsSlice";
 
 import Loading from "../components/JobList/Loading";
 import styled from 'styled-components';
+import {faClock, faGlobeEurope} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const JobPage = () => {
     const {id} = useParams();
@@ -46,7 +48,7 @@ const JobPage = () => {
                 </button>
 
                 <StyledGrayLabel>
-                    <i className="far fa-clock"/>
+                    <FontAwesomeIcon icon={faClock}/>
                     {job.created_at.split(" ").join(" ")}
                 </StyledGrayLabel>
 
@@ -64,7 +66,7 @@ const JobPage = () => {
                         <StyledInfo>
                             <p>{job.company}</p>
                             <StyledGrayLabel>
-                                <i className="fas fa-globe-europe"/>
+                                <FontAwesomeIcon icon={faGlobeEurope}/>
                                 {job.location}
                             </StyledGrayLabel>
                         </StyledInfo>

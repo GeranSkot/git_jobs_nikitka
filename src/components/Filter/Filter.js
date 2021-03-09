@@ -24,9 +24,9 @@ const Filter = ({
         setLocation(e.target.value.toLowerCase());
     };
 
-    const onJobTypeUpdate = (e) => {
-        if (fullTime !== "true") {
-            setFullTime("true");
+    const onJobTypeUpdate = () => {
+        if (fullTime !== true) {
+            setFullTime(true);
         } else {
             setFullTime(false);
         }
@@ -42,7 +42,7 @@ const Filter = ({
             newData = [...newData, ...newJobList];
         }
 
-        if (fullTime === "true") {
+        if (fullTime === true) {
             if (newData.length === 0) {
                 newData = [...jobs];
             }
@@ -54,7 +54,7 @@ const Filter = ({
             newData = [...newJobList];
         }
 
-        if ((location !== "null" && location !== "") || fullTime === "true") {
+        if ((location !== null && location !== "") || fullTime === true) {
             setPaginatedJobs(newData);
             setDisplayPaginationNumbers(false);
 
@@ -122,7 +122,7 @@ const StyledCheckBox = styled.div`
       display: flex;
       align-items: center;
       user-select: none;
-      margin-bottom: 0px;
+      margin-bottom: 0;
 `;
 
 const StyledLabel = styled.label`
