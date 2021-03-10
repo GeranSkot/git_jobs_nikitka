@@ -52,15 +52,16 @@ const Input = ({
 };
 
 const StyledInputGroup = styled.div`
+  
   input {
     border: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px 40px;
-    width: 50vh;
+    width: 100%;
     border-radius: 4px;
     font-size: 1.2rem;
     color: darken(#b9bdcf, 10%);
-    
+    position: center;  
   }
 `;
 
@@ -71,6 +72,7 @@ const StyledIcon = styled.i`
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
     left: 22px;
+    display: block;
 `;
 
 export default Input;

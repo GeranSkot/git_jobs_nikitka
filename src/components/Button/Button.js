@@ -17,9 +17,12 @@ const StyledButton = styled.button`
   font-size: 1.4rem;
   color: #fff;
   background-color: #1e86ff;
-  padding: 20px 40px;
+  padding: 15px 35px;
   cursor: pointer;
   font-weight: 500;
+  position: absolute;
+  margin-left: -125px;
+  margin-top: 3px;
 `;
 
 export default Button;
