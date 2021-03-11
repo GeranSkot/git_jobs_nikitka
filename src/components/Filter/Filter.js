@@ -9,6 +9,7 @@ import {selectAllJobs} from "../../services/redux/slices/jobs/jobsSlice";
 import {paginate} from "../../paginator";
 import styled from 'styled-components';
 
+import {faGlobeEurope} from '@fortawesome/free-solid-svg-icons';
 
 const Filter = ({
                     setPaginatedJobs,
@@ -83,7 +84,7 @@ const Filter = ({
             <StyledLocationLabel>Location</StyledLocationLabel>
             <Input
                 placeholder="City, state, zip code or country"
-                icon="fas fa-globe-europe"
+                icon={faGlobeEurope}
                 id="location-input"
                 onChange={onLocationUpdate}
             />
@@ -112,6 +113,9 @@ const StyledFilter = styled.div`
   padding: 42px 0;
   display: block;
   width: auto;
+  #location-input {
+    width: 120%;
+  }
 `;
 
 const StyledCheckBox = styled.div`

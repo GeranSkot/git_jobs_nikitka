@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../Button/Button";
 import styled from 'styled-components';
 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Input = ({
                    placeholder,
@@ -16,7 +17,10 @@ const Input = ({
         if (icon) {
             return (
                 <React.Fragment>
-                    <StyledIcon className={icon}/>
+                    <StyledIcon>
+                        <FontAwesomeIcon icon={icon}/>
+                    </StyledIcon>
+                    {/*<StyledIcon className={icon}/>*/}
                 </React.Fragment>
             );
         }
@@ -66,13 +70,10 @@ const StyledInputGroup = styled.div`
 `;
 
 const StyledIcon = styled.i`
-  color: #b9bdcf;
-    font-size: 1.8rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    left: 22px;
-    display: block;
+    color: #b9bdcf;
+    display: none;
+    margin-left: 20px;
+    width: 5%;
 `;
 
 export default Input;
