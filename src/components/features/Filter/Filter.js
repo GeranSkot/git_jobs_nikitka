@@ -6,6 +6,7 @@ import Input from "../../shared/Input/Input";
 import Choice from "./Choice";
 import {selectAllJobs} from "../../../services/redux/slices/jobs/jobsSlice";
 import {paginate} from "../../../paginator";
+import {checkFullTime, checkLocation} from "./FilterData";
 
 // TODO импорты так не дели. Обычно просто стили в конце списка импортов идут
 
@@ -35,31 +36,13 @@ const Filter = ({
         }
     };
 
-    let newData = [];
-
-    const checkLocation = () => {
-        if (location) {
-            const newJobList = jobs.filter((job) => job.location.toLowerCase().includes(location));
-            newData = [...newData, ...newJobList];
-        }
-        return newData;
-    }
-
-    const checkFullTime = () => {
-        if (fullTime === true) {
-            if (newData.length === 0) {
-                newData = [...jobs];
-            }
-            const newJobList = newData.filter((job) => job.type.toLowerCase().includes("full time"));
-            newData = [...newJobList]
-        }
-        return newData;
-    }
-
     useEffect(() => {
         // TODO дикий по размерам эффект. Разделяй
-        checkLocation();
-        checkFullTime();
+        let newData = [];
+        // eslint-disable-next-line no-unused-expressions
+        location ? newData = checkLocation(newData = [], location, jobs) : newData;
+        // eslint-disable-next-line no-unused-expressions
+        fullTime ? newData = checkFullTime(newData = [], fullTime, jobs) : newData;
         if ((location !== null && location !== "") || fullTime === true) {
             setPaginatedJobs(newData);
             setDisplayPaginationNumbers(false);
@@ -68,7 +51,6 @@ const Filter = ({
         setDisplayPaginationNumbers(true);
         setPaginatedJobs(paginate(jobs, 1).items);
     }, [location, fullTime, jobs, setPaginatedJobs, setDisplayPaginationNumbers]);
-    // });
 
     return (
         <StyledFilter>
