@@ -40,9 +40,10 @@ const Filter = ({
         // TODO дикий по размерам эффект. Разделяй
         let newData = [];
         // eslint-disable-next-line no-unused-expressions
-        location ? newData = checkLocation(newData = [], location, jobs) : newData;
+        location ? newData = checkLocation(newData, location, jobs) : newData;
         // eslint-disable-next-line no-unused-expressions
-        fullTime ? newData = checkFullTime(newData = [], fullTime, jobs) : newData;
+        fullTime ? newData = checkFullTime(newData, fullTime, jobs) : newData;
+
         if ((location !== null && location !== "") || fullTime === true) {
             setPaginatedJobs(newData);
             setDisplayPaginationNumbers(false);
