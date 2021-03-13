@@ -37,8 +37,8 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
 
     return (
         <StyledPaginationButtons>
-            {/* eslint-disable-next-line react/button-has-type */}
-            <button
+
+            <button type="button"
                 onClick={() => {
                     setCurrentPage(currentPage - 1);
                 }}
@@ -55,8 +55,8 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
                 }
 
                 return (
-                    // eslint-disable-next-line react/button-has-type
-                    <button
+
+                    <button type="submit"
                         key={pageNumber}
                         onClick={(e) => {
                             setCurrentPage(e.target.textContent);
@@ -68,8 +68,7 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
                 );
             })}
 
-            {/* eslint-disable-next-line react/button-has-type */}
-            <button
+            <button type="submit"
                 onClick={() => {
                     setCurrentPage(currentPage + 1);
                 }}
@@ -79,7 +78,6 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
                 }
             >
                 <FontAwesomeIcon icon={faChevronRight}/>
-
             </button>
         </StyledPaginationButtons>
     );

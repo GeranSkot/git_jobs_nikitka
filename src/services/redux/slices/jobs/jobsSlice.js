@@ -1,5 +1,5 @@
 import {createAsyncThunk, createEntityAdapter, createSlice,} from "@reduxjs/toolkit";
-import {getJobs} from "../../../api/jobs";
+import getJobs from "../../../api/jobs";
 
 const jobsAdapter = createEntityAdapter();
 
@@ -10,8 +10,7 @@ const initialState = jobsAdapter.getInitialState({
 
 export const fetchJobs = createAsyncThunk(
     "jobs/fetchJobs",
-    // eslint-disable-next-line no-unused-vars
-    async (params = {}, thunkAPI) => 
+    async (params = {}) =>
         // eslint-disable-next-line no-return-await
          await getJobs(params)
 );
@@ -47,7 +46,5 @@ export const {
     selectAll: selectAllJobs,
     selectById: selectJobById,
 } = jobsAdapter.getSelectors((state) => state.jobs);
-
-// export const {updateJobs} = jobsSlice.actions;
 
 export default jobsSlice.reducer;

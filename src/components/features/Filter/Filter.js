@@ -50,7 +50,6 @@ const Filter = ({
             if (newData.length === 0) {
                 newData = [...jobs];
             }
-
             const newJobList = newData.filter((job) => job.type.toLowerCase().includes("full time"));
             newData = [...newJobList]
         }
@@ -58,20 +57,18 @@ const Filter = ({
     }
 
     useEffect(() => {
-
         // TODO дикий по размерам эффект. Разделяй
         checkLocation();
         checkFullTime();
-
         if ((location !== null && location !== "") || fullTime === true) {
             setPaginatedJobs(newData);
             setDisplayPaginationNumbers(false);
             return;
         }
-
         setDisplayPaginationNumbers(true);
         setPaginatedJobs(paginate(jobs, 1).items);
     }, [location, fullTime, jobs, setPaginatedJobs, setDisplayPaginationNumbers]);
+    // });
 
     return (
         <StyledFilter>

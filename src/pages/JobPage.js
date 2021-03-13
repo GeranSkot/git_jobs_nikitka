@@ -35,12 +35,10 @@ const JobPage = () => {
             </StyledHowToWrapper>
 
             <StyledJobWrapper>
-
                 <StyledTop>
                     <h2>{job.title}</h2>
 
-                    {/* eslint-disable-next-line react/button-has-type */}
-                    <button>
+                    <button type="button">
                         {job.type}
                     </button>
                 </StyledTop>

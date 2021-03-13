@@ -1,7 +1,8 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {reducers} from "../slices/slices";
+import reducers from "../slices/slices";
 
-// eslint-disable-next-line import/prefer-default-export
-export const store = configureStore({
+const store = configureStore({
     reducer: reducers,
 });
+
+export default store;

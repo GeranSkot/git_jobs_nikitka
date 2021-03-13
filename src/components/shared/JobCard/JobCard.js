@@ -24,8 +24,8 @@ const JobCard = ({companyLogo, company, title, type, location, created_at, id,})
                     <Link to={`/${id}`}>
                         <h2>{title}</h2>
                     </Link>
-                    {/* eslint-disable-next-line react/button-has-type */}
-                    <button>{type}</button>
+
+                    <button type="submit">{type}</button>
                 </StyledPositionDetails>
             </StyledPositionInfo>
 

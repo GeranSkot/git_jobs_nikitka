@@ -4,7 +4,7 @@ import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
 import JobList from "../components/features/JobList/JobList";
 import Input from "../components/shared/Input/Input";
 import Filter from "../components/features/Filter/Filter";
-import {store} from "../services/redux/store/store";
+import store from "../services/redux/store/store";
 import {fetchJobs} from "../services/redux/slices/jobs/jobsSlice";
 
 const Main = () => {

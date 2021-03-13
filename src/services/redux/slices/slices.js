@@ -1,6 +1,7 @@
 import jobsReducer from "./jobs/jobsSlice";
 
-// eslint-disable-next-line import/prefer-default-export
-export const reducers = {
+const reducers = {
     jobs: jobsReducer,
 };
+
+export default reducers;
