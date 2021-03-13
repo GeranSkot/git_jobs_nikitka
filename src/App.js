@@ -31,6 +31,11 @@ const App = () => {
 const StyledContainer = styled.div`
   padding: 0;
   margin-left: 15vh;
+  @media(max-width: 1300px) {
+    margin: 0 0 0 0;
+    padding: 0 0;
+    width: border-box 550px;
+  }
 `;
 
 export default App;

@@ -120,19 +120,18 @@ const Filter = ({
 };
 
 const StyledFilter = styled.div`
-  padding: 42px 0;
+  
   display: flex;
   flex-direction: column;
   width: 20%;
-  margin-right: 35px;
+  margin: 30px 60px 0 0;
   #location-input {
     width: 140%;
   }
   
   @media (max-width: 1300px){
-     #location-input {
-    width: 96%;
-  }
+    width: 100%;
+    padding: 0 0;
   }
   
 `;
@@ -165,6 +164,13 @@ const StyledChoices = styled.div`
 `;
 
 const StyledInputWrapper = styled.div`
-  width: 75%;
+  width: 20vh;
+  @media (max-width: 1300px){
+    width: 550px;
+    padding: 0 0;
+    #location-input {
+      width: 550px;
+  }
+  }
 `;
 export default Filter;

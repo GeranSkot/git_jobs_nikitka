@@ -89,7 +89,7 @@ const StyledJobList = styled.div`
     display: flex;
     width: 100%;
     padding: 20px 0;
-    margin: 0 80px 0 0;
+    margin: 0 80px 0 40px;
     flex-direction: column;
     
     button {
@@ -107,7 +107,7 @@ const StyledJobList = styled.div`
     
     @media (max-width: 1300px){
      position: center;
-     width: 94%;
+     width: 550px;
      margin: 0 0 0 0;
      padding: 0 0;
     }
