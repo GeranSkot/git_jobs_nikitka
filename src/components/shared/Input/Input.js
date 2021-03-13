@@ -1,28 +1,20 @@
 import React from "react";
-import Button from "../Button/Button";
-import styled from 'styled-components';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import styled from 'styled-components';
+import Button from "../Button/Button";
 
-const Input = ({
-                   placeholder,
-                   icon,
-                   id = "default",
-                   onChange = null,
-                   buttonText,
-                   onButtonClick = null,
-               }) => {
+// eslint-disable-next-line react/prop-types
+const Input = ({placeholder, icon, id = "default", onChange = null, buttonText, onButtonClick = null,}) => {
     const Icon = () => {
         if (icon) {
             return (
-                <React.Fragment>
+                <>
                     <StyledIcon>
                         <FontAwesomeIcon icon={icon}/>
                     </StyledIcon>
-                    {/*<StyledIcon className={icon}/>*/}
-                </React.Fragment>
+                </>
             );
         }
-
         return null;
     };
 
@@ -35,7 +27,6 @@ const Input = ({
                 />
             );
         }
-
         return null;
     };
 
@@ -56,7 +47,6 @@ const Input = ({
 const StyledInputGroup = styled.div`
   
   width: 100%;
-  
   input {
     border: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

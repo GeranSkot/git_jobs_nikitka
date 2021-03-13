@@ -1,20 +1,23 @@
 import React, {useState, useEffect} from "react";
-import Input from "../../shared/Input/Input";
-import Choice from "./Choice";
 import {useSelector} from "react-redux";
-import {selectAllJobs} from "../../../services/redux/slices/jobs/jobsSlice";
-import {paginate} from "../../../paginator";
 import styled from 'styled-components';
 import {faGlobeEurope} from '@fortawesome/free-solid-svg-icons';
-
+import Input from "../../shared/Input/Input";
+import Choice from "./Choice";
+import {selectAllJobs} from "../../../services/redux/slices/jobs/jobsSlice";
+import {paginate} from "../../../paginator";
 
 // TODO импорты так не дели. Обычно просто стили в конце списка импортов идут
 
 const Filter = ({
                     // TODO что с отступами??? В начале любого проекта настраивается линтер и прописываются правила. Обычно вместе с airbnb
+                    // eslint-disable-next-line react/prop-types
                     setPaginatedJobs,
+                    // eslint-disable-next-line react/prop-types
                     setDisplayPaginationNumbers,
+                    // eslint-disable-next-line react/prop-types
                     location,
+                    // eslint-disable-next-line react/prop-types
                     setLocation,
                 }) => {
     const [fullTime, setFullTime] = useState(false);
@@ -36,12 +39,10 @@ const Filter = ({
 
     const checkLocation = () => {
         if (location) {
-            const newJobList = jobs.filter((job) => {
-                return job.location.toLowerCase().includes(location);
-            });
-
-            return newData = [...newData, ...newJobList];
+            const newJobList = jobs.filter((job) => job.location.toLowerCase().includes(location));
+            newData = [...newData, ...newJobList];
         }
+        return newData;
     }
 
     const checkFullTime = () => {
@@ -50,12 +51,10 @@ const Filter = ({
                 newData = [...jobs];
             }
 
-            const newJobList = newData.filter((job) => {
-                return job.type.toLowerCase().includes("full time");
-            });
-
-            return newData = [...newJobList];
+            const newJobList = newData.filter((job) => job.type.toLowerCase().includes("full time"));
+            newData = [...newJobList]
         }
+        return newData;
     }
 
     useEffect(() => {
@@ -104,16 +103,14 @@ const Filter = ({
                     {value: "amsterdam", label: "Amsterdam"},
                     {value: "newyork", label: "New York"},
                     {value: "berlin", label: "Berlin"},
-                ].map((choice) => {
-                    return (
+                ].map((choice) => (
                         <Choice
                             key={choice.value}
                             value={choice.value}
                             label={choice.label}
                             onLocationUpdate={onLocationUpdate}
                         />
-                    );
-                })}
+                    ))}
             </StyledChoices>
         </StyledFilter>
     );

@@ -1,27 +1,23 @@
 import React from "react";
 import {Link, useParams} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useSelector} from "react-redux";
-import {selectJobById} from "../services/redux/slices/jobs/jobsSlice";
-import Loading from "../components/features/JobList/Loading";
 import styled from 'styled-components';
 import {faClock, faGlobeEurope} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {selectJobById} from "../services/redux/slices/jobs/jobsSlice";
+import Loading from "../components/features/JobList/Loading";
 
 const JobPage = () => {
     const {id} = useParams();
 
     const job = useSelector((state) => selectJobById(state, id));
 
-    const HowTo = () => {
-        return (
+    const HowTo = () => (
             <StyledHowToApply dangerouslySetInnerHTML={{__html: job.how_to_apply}}/>
         );
-    };
-    const Description = () => {
-        return (
+    const Description = () => (
             <StyledDescription dangerouslySetInnerHTML={{__html: job.description}}/>
         );
-    };
 
     if (job === undefined) {
         return <Loading/>;
@@ -43,6 +39,7 @@ const JobPage = () => {
                 <StyledTop>
                     <h2>{job.title}</h2>
 
+                    {/* eslint-disable-next-line react/button-has-type */}
                     <button>
                         {job.type}
                     </button>

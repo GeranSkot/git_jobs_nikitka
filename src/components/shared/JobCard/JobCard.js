@@ -4,18 +4,14 @@ import styled from 'styled-components';
 import {faClock, faGlobeEurope} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const JobCard = ({
-                     companyLogo,
-                     company,
-                     title,
-                     type,
-                     location,
-                     created_at,
-                     id,
-                 }) => {
+// eslint-disable-next-line react/prop-types,camelcase
+const JobCard = ({companyLogo, company, title, type, location, created_at, id,}) => {
+    // eslint-disable-next-line camelcase,no-param-reassign,react/prop-types
     created_at = created_at.split(" ");
 
+    // eslint-disable-next-line no-param-reassign
     delete created_at[3];
+    // eslint-disable-next-line no-param-reassign
     delete created_at[4];
     return (
         <StyledWrapper>
@@ -25,9 +21,10 @@ const JobCard = ({
                 </StyledLogo>
                 <StyledPositionDetails>
                     <h5>{company}</h5>
-                    <Link to={"/" + id}>
+                    <Link to={`/${id}`}>
                         <h2>{title}</h2>
                     </Link>
+                    {/* eslint-disable-next-line react/button-has-type */}
                     <button>{type}</button>
                 </StyledPositionDetails>
             </StyledPositionInfo>
@@ -40,6 +37,7 @@ const JobCard = ({
 
                 <div className="created">
                     <FontAwesomeIcon icon={faClock}/>
+                    {/* eslint-disable-next-line react/prop-types */}
                     {created_at.join(" ")}
                 </div>
             </StyledApplicationInfo>

@@ -1,8 +1,4 @@
-import {
-    createSlice,
-    createEntityAdapter,
-    createAsyncThunk,
-} from "@reduxjs/toolkit";
+import {createAsyncThunk, createEntityAdapter, createSlice,} from "@reduxjs/toolkit";
 import {getJobs} from "../../../api/jobs";
 
 const jobsAdapter = createEntityAdapter();
@@ -14,11 +10,10 @@ const initialState = jobsAdapter.getInitialState({
 
 export const fetchJobs = createAsyncThunk(
     "jobs/fetchJobs",
-    async (params = {}, thunkAPI) => {
-        const response = await getJobs(params);
-
-        return response;
-    }
+    // eslint-disable-next-line no-unused-vars
+    async (params = {}, thunkAPI) => 
+        // eslint-disable-next-line no-return-await
+         await getJobs(params)
 );
 
 const jobsSlice = createSlice({
@@ -32,13 +27,17 @@ const jobsSlice = createSlice({
     extraReducers: {
         [fetchJobs.fulfilled]: (state, action) => {
             jobsAdapter.setAll(state, action.payload);
+            // eslint-disable-next-line no-param-reassign
             state.status = "finished";
         },
         [fetchJobs.pending]: (state) => {
+            // eslint-disable-next-line no-param-reassign
             state.status = "loading";
         },
         [fetchJobs.rejected]: (state, action) => {
+            // eslint-disable-next-line no-param-reassign
             state.status = "rejected";
+            // eslint-disable-next-line no-param-reassign
             state.error = action.error.message;
         },
     },

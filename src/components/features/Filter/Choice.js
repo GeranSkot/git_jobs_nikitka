@@ -1,8 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
 
-const Choice = ({onLocationUpdate, value, label}) => {
-    return (
+// eslint-disable-next-line react/prop-types
+const Choice = ({onLocationUpdate, value, label}) => (
         <StyledChoice>
             <input
                 type="radio"
@@ -14,7 +14,6 @@ const Choice = ({onLocationUpdate, value, label}) => {
             <label htmlFor={value}>{label}</label>
         </StyledChoice>
     );
-};
 
 const StyledChoice = styled.div`
   margin-top: 25px;
@@ -29,6 +28,4 @@ const StyledChoice = styled.div`
         font-style: normal;
       }    
 `;
-
-
 export default Choice;

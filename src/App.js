@@ -1,16 +1,12 @@
 import React from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-
+import styled from 'styled-components';
 import Main from "./pages/Main";
 import JobPage from "./pages/JobPage";
-
 import Logo from "./components/shared/Logo/Logo";
 import Footer from "./components/features/Footer/Footer";
-import styled from 'styled-components';
 
-
-const App = () => {
-    return (
+const App = () => (
         <Router>
             <StyledContainer>
                 <Logo/>
@@ -26,7 +22,6 @@ const App = () => {
             </StyledContainer>
         </Router>
     );
-};
 
 const StyledContainer = styled.div`
   padding: 0;

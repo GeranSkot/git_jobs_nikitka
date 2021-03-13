@@ -1,16 +1,19 @@
 import React, {useState, useEffect} from "react";
+import {useSelector} from "react-redux";
+import styled from 'styled-components';
 import JobCard from "../../shared/JobCard/JobCard";
 import Pagination from "./Pagination";
 import Loading from "./Loading";
 import Rejected from "./Rejected";
-import {useSelector} from "react-redux";
 import {selectAllJobs} from "../../../services/redux/slices/jobs/jobsSlice";
 import {paginate} from "../../../paginator";
-import styled from 'styled-components';
 
 const JobList = ({
+                     // eslint-disable-next-line react/prop-types
                      paginatedJobs,
+                     // eslint-disable-next-line react/prop-types
                      setPaginatedJobs,
+                     // eslint-disable-next-line react/prop-types
                      displayPaginationNumbers,
                  }) => {
     const [currentPage, setCurrentPage] = useState("1");
@@ -25,6 +28,7 @@ const JobList = ({
     }, [jobsSelector]);
 
     useEffect(() => {
+        // eslint-disable-next-line no-shadow
         const {items: paginatedJobs, pages} = paginate(jobs, currentPage);
 
         setPaginatedJobs(paginatedJobs);
@@ -39,6 +43,7 @@ const JobList = ({
         return <Rejected/>;
     }
 
+    // eslint-disable-next-line react/prop-types
     if (paginatedJobs.length === 0 || jobs.length === 0) {
         return <StyledNoResult>No results</StyledNoResult>;
     }
@@ -60,6 +65,7 @@ const JobList = ({
     return (
         <StyledJobList>
             <div>
+                {/* eslint-disable-next-line react/prop-types */}
                 {paginatedJobs.map((job) => {
                     if (job) {
                         return (

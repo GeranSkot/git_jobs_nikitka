@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {Provider} from "react-redux";
-
-import App from "./App.js";
-
+import App from "./App";
 import {store} from "./services/redux/store/store";
-
 import {fetchJobs} from "./services/redux/slices/jobs/jobsSlice";
 import GlobalStyles from "./styles/globalStyle";
 

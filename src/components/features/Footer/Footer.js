@@ -1,13 +1,11 @@
 import React from "react";
 import styled from 'styled-components';
 
-const Footer = () => {
-    return (
+const Footer = () => (
         <StyledFooter>
-            <a href="https://rule34.xxx/">COME ON COLLAGE BOY</a>
+            <a href="https://www.youtube.com/watch?v=BaGCLYDJEnM&t">COME ON COLLAGE BOY</a>
         </StyledFooter>
     );
-};
 
 const StyledFooter = styled.div`
   padding: 45px;

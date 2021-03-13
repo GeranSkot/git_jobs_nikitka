@@ -1,15 +1,14 @@
 import React from "react";
 import styled from 'styled-components';
 
-const Button = ({buttonText, onClick = null}) => {
-    return (
-        <React.Fragment>
+// eslint-disable-next-line react/prop-types
+const Button = ({buttonText, onClick = null}) => (
+        <>
             <StyledButton onClick={onClick}>
                 {buttonText}
             </StyledButton>
-        </React.Fragment>
+        </>
     );
-};
 
 // TODO компоненты дели на features/shared. Сейчас у тебя всё в одной папке
 
@@ -28,10 +27,8 @@ const StyledButton = styled.button`
   
   @media (max-width: 1300px){
      margin-left: -77px;
-     padding: 15px 10px;
-     
+     padding: 15px 10px;   
   }
-  
 `;
 
 export default Button;

@@ -1,8 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 
-const Rejected = () => {
-    return (
+const Rejected = () => (
         <StyledRejected>
             <h1>ОПА БЛЯ, ШОСЦИ СЛУЧЫЛАСЯ</h1>
             <h3>
@@ -11,12 +10,9 @@ const Rejected = () => {
             </h3>
         </StyledRejected>
     );
-};
 
 const StyledRejected = styled.div`
     display: block;
-    
-     
     background: #1e86ff;
       color: #fff;
       padding: 16px;

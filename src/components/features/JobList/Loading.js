@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const Loading = () => {
-    return (
+const Loading = () => (
         <StyledLoading>
             <img src="loading.svg" alt="loading gif"/>
         </StyledLoading>
     );
-};
 
 const StyledLoading = styled.div`
   width: 100%;

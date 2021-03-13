@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+// eslint-disable-next-line react/prop-types
 const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
+    // eslint-disable-next-line no-param-reassign
     currentPage = Number(currentPage);
 
     const buttons = () => {
@@ -28,15 +30,14 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
             buttonArray.push(pagesCount);
         }
 
-        buttonArray = buttonArray.filter((element) => {
-            return element !== 0;
-        });
+        buttonArray = buttonArray.filter((element) => element !== 0);
 
         return buttonArray;
     };
 
     return (
         <StyledPaginationButtons>
+            {/* eslint-disable-next-line react/button-has-type */}
             <button
                 onClick={() => {
                     setCurrentPage(currentPage - 1);
@@ -54,6 +55,7 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
                 }
 
                 return (
+                    // eslint-disable-next-line react/button-has-type
                     <button
                         key={pageNumber}
                         onClick={(e) => {
@@ -66,6 +68,7 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
                 );
             })}
 
+            {/* eslint-disable-next-line react/button-has-type */}
             <button
                 onClick={() => {
                     setCurrentPage(currentPage + 1);

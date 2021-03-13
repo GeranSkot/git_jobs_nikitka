@@ -1,8 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 
-const Logo = () => {
-    return (
+const Logo = () => (
         <div>
             <StyledLogo>
                 <StyledGithub>Github</StyledGithub>
@@ -10,7 +9,6 @@ const Logo = () => {
             </StyledLogo>
         </div>
     );
-};
 
 const StyledLogo = styled.div`
   margin-top: 32px;
