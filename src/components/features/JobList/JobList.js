@@ -1,16 +1,12 @@
 import React, {useState, useEffect} from "react";
-
-import JobCard from "../JobCard/JobCard";
+import JobCard from "../../shared/JobCard/JobCard";
 import Pagination from "./Pagination";
 import Loading from "./Loading";
 import Rejected from "./Rejected";
-
 import {useSelector} from "react-redux";
-import {selectAllJobs} from "../../services/redux/slices/jobs/jobsSlice";
-
-import {paginate} from "../../paginator";
+import {selectAllJobs} from "../../../services/redux/slices/jobs/jobsSlice";
+import {paginate} from "../../../paginator";
 import styled from 'styled-components';
-
 
 const JobList = ({
                      paginatedJobs,
@@ -92,8 +88,8 @@ const StyledJobList = styled.div`
     
     display: flex;
     width: 100%;
-    padding: 20px 40px;
-    margin: 0 30px 0 40px;
+    padding: 20px 0;
+    margin: 0 80px 0 0;
     flex-direction: column;
     
     button {

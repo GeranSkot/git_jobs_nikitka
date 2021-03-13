@@ -1,17 +1,17 @@
 import React, {useState, useEffect} from "react";
-
-import Input from "../Input/Input";
+import Input from "../../shared/Input/Input";
 import Choice from "./Choice";
-
 import {useSelector} from "react-redux";
-import {selectAllJobs} from "../../services/redux/slices/jobs/jobsSlice";
-
-import {paginate} from "../../paginator";
+import {selectAllJobs} from "../../../services/redux/slices/jobs/jobsSlice";
+import {paginate} from "../../../paginator";
 import styled from 'styled-components';
-
 import {faGlobeEurope} from '@fortawesome/free-solid-svg-icons';
 
+
+// TODO импорты так не дели. Обычно просто стили в конце списка импортов идут
+
 const Filter = ({
+                    // TODO что с отступами??? В начале любого проекта настраивается линтер и прописываются правила. Обычно вместе с airbnb
                     setPaginatedJobs,
                     setDisplayPaginationNumbers,
                     location,
@@ -26,23 +26,25 @@ const Filter = ({
     };
 
     const onJobTypeUpdate = () => {
+        // TODO забудь про else
         if (fullTime !== true) {
             setFullTime(true);
-        } else {
-            setFullTime(false);
         }
     };
 
-    useEffect(() => {
-        let newData = [];
+    let newData = [];
+
+    const checkLocation = () => {
         if (location) {
             const newJobList = jobs.filter((job) => {
                 return job.location.toLowerCase().includes(location);
             });
 
-            newData = [...newData, ...newJobList];
+            return newData = [...newData, ...newJobList];
         }
+    }
 
+    const checkFullTime = () => {
         if (fullTime === true) {
             if (newData.length === 0) {
                 newData = [...jobs];
@@ -52,13 +54,19 @@ const Filter = ({
                 return job.type.toLowerCase().includes("full time");
             });
 
-            newData = [...newJobList];
+            return newData = [...newJobList];
         }
+    }
+
+    useEffect(() => {
+
+        // TODO дикий по размерам эффект. Разделяй
+        checkLocation();
+        checkFullTime();
 
         if ((location !== null && location !== "") || fullTime === true) {
             setPaginatedJobs(newData);
             setDisplayPaginationNumbers(false);
-
             return;
         }
 
@@ -82,12 +90,14 @@ const Filter = ({
             </StyledCheckBox>
 
             <StyledLocationLabel>Location</StyledLocationLabel>
-            <Input
-                placeholder="City, state, zip code or country"
-                icon={faGlobeEurope}
-                id="location-input"
-                onChange={onLocationUpdate}
-            />
+            <StyledInputWrapper>
+                <Input
+                    placeholder="City, state, zip code or country"
+                    icon={faGlobeEurope}
+                    id="location-input"
+                    onChange={onLocationUpdate}
+                />
+            </StyledInputWrapper>
             <StyledChoices>
                 {[
                     {value: "london", label: "London"},
@@ -113,8 +123,8 @@ const StyledFilter = styled.div`
   padding: 42px 0;
   display: flex;
   flex-direction: column;
-  width: auto;
-  margin-right: 20px;
+  width: 20%;
+  margin-right: 35px;
   #location-input {
     width: 140%;
   }
@@ -152,5 +162,9 @@ const StyledLocationLabel = styled.h2`
 
 const StyledChoices = styled.div`
    margin-top: 25px; 
+`;
+
+const StyledInputWrapper = styled.div`
+  width: 75%;
 `;
 export default Filter;

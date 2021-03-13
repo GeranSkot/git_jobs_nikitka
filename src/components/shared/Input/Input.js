@@ -1,8 +1,6 @@
 import React from "react";
-
 import Button from "../Button/Button";
 import styled from 'styled-components';
-
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Input = ({

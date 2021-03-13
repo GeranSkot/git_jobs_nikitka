@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-
 const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
     currentPage = Number(currentPage);
 

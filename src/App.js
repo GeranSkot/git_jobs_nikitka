@@ -4,8 +4,8 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Main from "./pages/Main";
 import JobPage from "./pages/JobPage";
 
-import Logo from "./components/Logo/Logo";
-import Footer from "./components/Footer/Footer";
+import Logo from "./components/shared/Logo/Logo";
+import Footer from "./components/features/Footer/Footer";
 import styled from 'styled-components';
 
 

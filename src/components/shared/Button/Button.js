@@ -11,6 +11,8 @@ const Button = ({buttonText, onClick = null}) => {
     );
 };
 
+// TODO компоненты дели на features/shared. Сейчас у тебя всё в одной папке
+
 const StyledButton = styled.button`
   border: 0;
   border-radius: 4px;

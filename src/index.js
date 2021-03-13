@@ -7,7 +7,7 @@ import App from "./App.js";
 import {store} from "./services/redux/store/store";
 
 import {fetchJobs} from "./services/redux/slices/jobs/jobsSlice";
-import GlobalStyles from "./assets/globalStyles/globalStyle";
+import GlobalStyles from "./styles/globalStyle";
 
 store.dispatch(fetchJobs());
 

@@ -1,10 +1,8 @@
 import React from "react";
 import {Link, useParams} from "react-router-dom";
-
 import {useSelector} from "react-redux";
 import {selectJobById} from "../services/redux/slices/jobs/jobsSlice";
-
-import Loading from "../components/JobList/Loading";
+import Loading from "../components/features/JobList/Loading";
 import styled from 'styled-components';
 import {faClock, faGlobeEurope} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

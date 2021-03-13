@@ -1,5 +1,7 @@
 import {createGlobalStyle} from 'styled-components';
 
+// TODO лучше создавать папку styles в src и туда кида всё, что связано со стилями. Дальше это могут быть темы, миксины и тд
+
 const GlobalStyles = createGlobalStyle`
   * {
   margin: 0;

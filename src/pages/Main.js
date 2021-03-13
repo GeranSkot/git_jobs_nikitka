@@ -1,11 +1,8 @@
 import React, {useState} from "react";
-
-import JobList from "../components/JobList/JobList";
-import Input from "../components/Input/Input";
-import Filter from "../components/Filter/Filter";
-
+import JobList from "../components/features/JobList/JobList";
+import Input from "../components/shared/Input/Input";
+import Filter from "../components/features/Filter/Filter";
 import {store} from "../services/redux/store/store.js";
-
 import {fetchJobs} from "../services/redux/slices/jobs/jobsSlice";
 import styled from 'styled-components';
 import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
