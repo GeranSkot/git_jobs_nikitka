@@ -21,8 +21,15 @@ const StyledButton = styled.button`
   cursor: pointer;
   font-weight: 500;
   position: absolute;
-  margin-left: -125px;
+  margin-left: -120px;
   margin-top: 3px;
+  
+  @media (max-width: 1300px){
+     margin-left: -77px;
+     padding: 15px 10px;
+     
+  }
+  
 `;
 
 export default Button;

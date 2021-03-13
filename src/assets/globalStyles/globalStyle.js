@@ -21,6 +21,10 @@ html {
     background: white;
   }
   
+  @media (max-width: 1300px){
+    font-size: 75%;
+  }
+  
 }
 
 body {

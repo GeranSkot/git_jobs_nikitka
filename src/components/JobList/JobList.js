@@ -90,9 +90,11 @@ const JobList = ({
 
 const StyledJobList = styled.div`
     
-    display: block;
+    display: flex;
     width: 100%;
     padding: 20px 40px;
+    margin: 0 30px 0 40px;
+    flex-direction: column;
     
     button {
       font-size: 1.2rem;
@@ -105,6 +107,13 @@ const StyledJobList = styled.div`
       color: #b9bdcf;
       transition: all 0.1s;
       cursor: pointer;
+    }
+    
+    @media (max-width: 1300px){
+     position: center;
+     width: 94%;
+     margin: 0 0 0 0;
+     padding: 0 0;
     }
 `;
 

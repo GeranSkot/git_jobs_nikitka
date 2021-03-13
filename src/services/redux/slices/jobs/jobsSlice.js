@@ -49,6 +49,6 @@ export const {
     selectById: selectJobById,
 } = jobsAdapter.getSelectors((state) => state.jobs);
 
-export const {updateJobs} = jobsSlice.actions;
+// export const {updateJobs} = jobsSlice.actions;
 
 export default jobsSlice.reducer;

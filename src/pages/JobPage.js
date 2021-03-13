@@ -41,12 +41,14 @@ const JobPage = () => {
             </StyledHowToWrapper>
 
             <StyledJobWrapper>
-                <h2>{job.title}</h2>
 
-                <button>
-                    {job.type}
-                </button>
+                <StyledTop>
+                    <h2>{job.title}</h2>
 
+                    <button>
+                        {job.type}
+                    </button>
+                </StyledTop>
                 <StyledGrayLabel>
                     <FontAwesomeIcon icon={faClock}/>
                     {job.created_at.split(" ").join(" ")}
@@ -82,8 +84,15 @@ const JobPage = () => {
 
 const StyledJobPageWrapper = styled.div`
   display: flex;
+  flex-direction: row;
   margin-top: 30px;
-  width: 100%;
+
+  @media (max-width: 1300px){
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+    }
+  
 `;
 
 const StyledHowToApply = styled.div`
@@ -102,6 +111,10 @@ const StyledDescription = styled.div`
       ul {
         margin: 20px;
       }
+      @media (max-width: 1300px){
+         position: center;
+         width: 100%;
+    }
 `;
 
 const StyledHowToWrapper = styled.div`
@@ -116,10 +129,10 @@ const StyledHowToWrapper = styled.div`
 
 const StyledJobWrapper = styled.div`
   display: block;
-  width: 70%;
+  width: 100%;
     height: 600px;
     overflow: auto;
-
+    margin: 0 0 0 0;
     h2 {
       font-size: 2.4rem;
       color: #334680;
@@ -164,6 +177,7 @@ const StyledCompanyInfo = styled.div`
         color: #334680;
         font-weight: 700;
       }
+      margin-right: 8vh;
 `;
 
 const StyledLogo = styled.div`
@@ -172,6 +186,10 @@ const StyledLogo = styled.div`
         border-radius: 4px;
         overflow: hidden;
         margin-right: 12px;
+        
+        img {
+        object-fit: contain;
+      }
 `;
 
 const StyledFlex = styled.div`
@@ -198,6 +216,23 @@ const StyledLabel = styled.h2`
     padding: 15px 0;
     user-select: none;
     margin-top: 15px;
+`;
+
+const StyledTop = styled.div`
+  display: flex;
+  flex-direction: row;
+  button {
+    font-size: 1.2rem;
+      background-color: transparent;
+      border: 1px solid #334680;
+      border-radius: 4px;
+      line-height: 30px;
+      padding: 0 10px;
+      margin-left: 8px;
+      color: #334680;
+      transition: all 0.1s;
+      cursor: pointer;
+  }
 `;
 
 export default JobPage;

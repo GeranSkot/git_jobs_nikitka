@@ -111,11 +111,20 @@ const Filter = ({
 
 const StyledFilter = styled.div`
   padding: 42px 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: auto;
+  margin-right: 20px;
   #location-input {
-    width: 120%;
+    width: 140%;
   }
+  
+  @media (max-width: 1300px){
+     #location-input {
+    width: 96%;
+  }
+  }
+  
 `;
 
 const StyledCheckBox = styled.div`

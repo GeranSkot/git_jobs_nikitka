@@ -16,6 +16,7 @@ const Rejected = () => {
 const StyledRejected = styled.div`
     display: block;
     
+     
     background: #1e86ff;
       color: #fff;
       padding: 16px;
@@ -29,6 +30,11 @@ const StyledRejected = styled.div`
           font-size: 2.8rem;
         }
       }
+      
+      @media(max-width: 1300px) {
+        margin: 30px;
+      }
+      
 `;
 
 export default Rejected;

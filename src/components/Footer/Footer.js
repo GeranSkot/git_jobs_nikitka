@@ -11,10 +11,10 @@ const Footer = () => {
 };
 
 const StyledFooter = styled.div`
-  padding: 85px;
+  padding: 45px;
   width: 100%;
   text-align: center;
-  position: center;
+  position: sticky;
   a {
     font-size: 1.4rem;
     text-decoration: none;

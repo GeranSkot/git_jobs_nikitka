@@ -110,7 +110,13 @@ const StyledPositionDetails = styled.div`
           cursor: pointer;
           font-weight: 500;
           opacity: 0.75;
-          color: #334680;   
+          color: #334680;
+          
+          &:hover{
+            color: #1e86ff;
+            border: 1px solid #1e86ff;
+      }
+             
       }
 `;
 

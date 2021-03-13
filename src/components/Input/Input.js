@@ -57,6 +57,8 @@ const Input = ({
 
 const StyledInputGroup = styled.div`
   
+  width: 100%;
+  
   input {
     border: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -67,6 +69,12 @@ const StyledInputGroup = styled.div`
     color: darken(#b9bdcf, 10%);
     position: center;  
   }
+  
+  @media (max-width: 1300px){
+     position: center;
+     width: 100%;
+  }
+  
 `;
 
 const StyledIcon = styled.i`
