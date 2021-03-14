@@ -9,18 +9,8 @@ import {paginate} from "../../../paginator";
 import {checkFullTime, checkLocation} from "./FilterData";
 
 // TODO импорты так не дели. Обычно просто стили в конце списка импортов идут
-
-const Filter = ({
-                    // TODO что с отступами??? В начале любого проекта настраивается линтер и прописываются правила. Обычно вместе с airbnb
-                    // eslint-disable-next-line react/prop-types
-                    setPaginatedJobs,
-                    // eslint-disable-next-line react/prop-types
-                    setDisplayPaginationNumbers,
-                    // eslint-disable-next-line react/prop-types
-                    location,
-                    // eslint-disable-next-line react/prop-types
-                    setLocation,
-                }) => {
+// eslint-disable-next-line react/prop-types
+const Filter = ({setPaginatedJobs, setDisplayPaginationNumbers, location, setLocation}) => {
     const [fullTime, setFullTime] = useState(false);
 
     const jobs = useSelector(selectAllJobs);
@@ -39,10 +29,8 @@ const Filter = ({
     useEffect(() => {
         // TODO дикий по размерам эффект. Разделяй
         let newData = [];
-        // eslint-disable-next-line no-unused-expressions
-        location ? newData = checkLocation(newData, location, jobs) : newData;
-        // eslint-disable-next-line no-unused-expressions
-        fullTime ? newData = checkFullTime(newData, fullTime, jobs) : newData;
+        newData = checkLocation(newData, location, jobs);
+        newData = checkFullTime(newData, fullTime, jobs);
 
         if ((location !== null && location !== "") || fullTime === true) {
             setPaginatedJobs(newData);
