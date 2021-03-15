@@ -8,20 +8,19 @@ const Footer = () => (
     );
 
 const StyledFooter = styled.div`
-  padding: 45px;
-  width: 100%;
-  text-align: center;
-  position: sticky;
-  a {
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: #b9bdcf;
-    font-weight: 500;
-    text-align: center;
-  }
-  @media(max-width: 1300px) {
-    width: 550px;
-  }
+   padding: 65px;
+   
+   text-align: center;
+   a {
+     font-size: 1.4rem;
+     text-decoration: none;
+     color: #b9bdcf;
+     font-weight: 500;
+     text-align: center;
+   }
+  // @media(max-width: 1300px) {
+  //   width: 550px;
+  // }
 `;
 
 export default Footer;

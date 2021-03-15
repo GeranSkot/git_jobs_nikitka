@@ -85,57 +85,67 @@ const Filter = ({setPaginatedJobs, setDisplayPaginationNumbers, location, setLoc
 };
 
 const StyledFilter = styled.div`
-  
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  margin: 30px 60px 0 0;
-  #location-input {
-    width: 140%;
-  }
-  
-  @media (max-width: 1300px){
-    width: 100%;
-    padding: 0 0;
-  }
+   display: flex;
+   flex-direction: column;
+   width: 20%;
+   margin: 0 200px 0 0;
+   font-family: "Poppins", sans-serif;
+   font-weight: 500;
+   
+  //
+  // @media (max-width: 1300px){
+  //   width: 100%;
+  //   padding: 0 0;
+  // }
   
 `;
 
 const StyledCheckBox = styled.div`
-  font-size: 1.4rem;
-      color: #334680;
-      font-weight: 500;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      user-select: none;
-      margin-bottom: 0;
+       font-size: 1.4rem;
+       color: #334680;
+       font-weight: 500;
+       cursor: pointer;
+       display: flex;
+       align-items: center;
+       user-select: none;
+       margin-bottom: 0;
+       padding-left: 15px;
 `;
 
 const StyledLabel = styled.label`
-  padding-left: 0.5rem;
+   padding-left: 5px;
+   font-weight: 700;
 `;
 
 const StyledLocationLabel = styled.h2`
-  text-transform: uppercase;
-    color: #b9bdcf;
-    font-size: 1.4rem;
-    padding: 15px 0;
-    user-select: none;
+   text-transform: uppercase;
+     color: #b9bdcf;
+     font-size: 1.4rem;
+     padding: 15px 0;
+     user-select: none;
 `;
 
 const StyledChoices = styled.div`
-   margin-top: 25px; 
+    display: block;
+    padding-top: 15px;
 `;
 
 const StyledInputWrapper = styled.div`
-  width: 20vh;
-  @media (max-width: 1300px){
-    width: 550px;
-    padding: 0 0;
-    #location-input {
-      width: 550px;
-  }
-  }
+  height: 50px;
+  #location-input {
+     width: 380px;
+     height: 50px;
+     margin: 0 0 0 0;
+     font-family: "Roboto", sans-serif;
+     font-weight: 400;
+   }
+   //display: block;
+  // @media (max-width: 1300px){
+  //   width: 550px;
+  //   padding: 0 0;
+  //   #location-input {
+  //     width: 550px;
+  // }
+  // }
 `;
 export default Filter;

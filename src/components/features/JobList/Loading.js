@@ -8,9 +8,9 @@ const Loading = () => (
     );
 
 const StyledLoading = styled.div`
-  width: 100%;
-  text-align: center;
-  margin-top: 100px;
+  margin-left: 360px;
+   text-align: center;
+   margin-top: 100px;
 `;
 
 export default Loading;

@@ -84,42 +84,42 @@ const Pagination = ({pagesCount, setCurrentPage, currentPage}) => {
 };
 
 const StyledPaginationButtons = styled.div`
-  text-align: right;
-    margin-top: 32px;
-    display: block;
-    flex-direction: row;
-    button {
-      font-size: 1.2rem;
-      background-color: transparent;
-      border: 1px solid #b7bcce;
-      border-radius: 4px;
-      line-height: 30px;
-      padding: 0 10px;
-      margin-left: 8px;
-      color: #b9bdcf;
-      transition: all 0.1s;
-      cursor: pointer;
+   text-align: right;
+     margin-top: 32px;
+     display: block;
+     flex-direction: row;
+     button {
+       font-size: 12px;
+       background-color: transparent;
+       border: 1px solid #b7bcce;
+       border-radius: 4px;
+       width: 36px;
+       height: 36px;
+       margin-left: 8px;
+       color: #b9bdcf;
+       transition: all 0.1s;
+       cursor: pointer;
       
-      &:hover{
-        color: #1e86ff;
-        border: 1px solid #1e86ff;
-      } 
-    }
-    .active{
-      background-color: #1e86ff;
-      color: #fff;
-    }
+       &:hover{
+         //color: #1e86ff;
+         border: 1px solid #1e86ff;
+       } 
+     }
+     .active{
+       background-color: #1e86ff;
+       color: #fff;
+     }
     
-    @media (max-width: 1300px){
-     position: center;
-     text-align: center;
-  }
+  //   @media (max-width: 1300px){
+  //    position: center;
+  //    text-align: center;
+  // }
 `;
 
 const StyledDots = styled.i`
-      font-size: 1.8rem;
-      color: #b9bdcf;
-      background-color: #334680;
+       font-size: 18px;
+       color: #b9bdcf;
+       background-color: #334680;
 `;
 
 export default Pagination;

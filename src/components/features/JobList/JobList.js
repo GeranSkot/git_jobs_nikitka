@@ -91,38 +91,40 @@ const JobList = ({
 };
 
 const StyledJobList = styled.div`
+    display: block;
+    //background-color: aqua;
+    width: 830px;
+    // display: flex;
+    // width: 100%;
+    // padding: 20px 0;
+    // margin: 0 80px 0 40px;
+    // flex-direction: column;
+    //
+    // button {
+    //   font-size: 1.2rem;
+    //   background-color: transparent;
+    //   border: 1px solid #b7bcce;
+    //   border-radius: 4px;
+    //   line-height: 30px;
+    //   padding: 0 10px;
+    //   margin-left: 8px;
+    //   color: #b9bdcf;
+    //   transition: all 0.1s;
+    //   cursor: pointer;
+    // }
     
-    display: flex;
-    width: 100%;
-    padding: 20px 0;
-    margin: 0 80px 0 40px;
-    flex-direction: column;
-    
-    button {
-      font-size: 1.2rem;
-      background-color: transparent;
-      border: 1px solid #b7bcce;
-      border-radius: 4px;
-      line-height: 30px;
-      padding: 0 10px;
-      margin-left: 8px;
-      color: #b9bdcf;
-      transition: all 0.1s;
-      cursor: pointer;
-    }
-    
-    @media (max-width: 1300px){
-     position: center;
-     width: 550px;
-     margin: 0 0 0 0;
-     padding: 0 0;
-    }
+    // @media (max-width: 1300px){
+    //  position: center;
+    //  width: 550px;
+    //  margin: 0 0 0 0;
+    //  padding: 0 0;
+    // }
 `;
 
 const StyledNoResult = styled.h1`
-  color: #1e86ff;
-  text-align: center;
-  margin-top: 50px;
+  // color: #1e86ff;
+  // text-align: center;
+  // margin-top: 50px;
 `;
 
 export default JobList;

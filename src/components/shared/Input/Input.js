@@ -31,7 +31,7 @@ const Input = ({placeholder, icon, id = "default", onChange = null, buttonText, 
     };
 
     return (
-        <StyledInputGroup>
+        <StyledInputGroup >
             <input
                 type="text"
                 placeholder={placeholder}
@@ -41,35 +41,40 @@ const Input = ({placeholder, icon, id = "default", onChange = null, buttonText, 
             <Icon/>
             <ButtonComponent/>
         </StyledInputGroup>
+
     );
 };
 
 const StyledInputGroup = styled.div`
-  
-  width: 100%;
-  input {
+   display: block; 
+   font-family: "Roboto", sans-serif;
+   width: 1200px;
+   height: 140px;
+   input {
+    margin: 42px 205px 42px 205px;
+    width: 790px;
+    height: 55px;
     border: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 40px;
-    width: 100%;
     border-radius: 4px;
-    font-size: 1.2rem;
-    color: darken(#b9bdcf, 10%);
-    position: center;  
-  }
-  
-  @media (max-width: 1300px){
-     position: center;
-     width: 100%;
-  }
+    padding-left: 42px;
+    font-size: 12px;
+    color: darken(#b9bdcf, 10%); 
+   }
+  //
+  // @media (max-width: 1300px){
+  //    position: center;
+  //    width: 100%;
+  // }
   
 `;
 
 const StyledIcon = styled.i`
+    position: absolute; 
     color: #b9bdcf;
-    display: none;
-    margin-left: 20px;
-    width: 5%;
+    font-size: 15px;
+    margin-left: -975px;
+    margin-top: 60px;
 `;
 
 export default Input;

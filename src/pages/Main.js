@@ -53,40 +53,32 @@ const Main = () => {
 };
 
 const StyledInputWrapper = styled.div`
-  height: 10%;
-  width: 95%;
   border-radius: 8px;
-  margin-top: 30px;
   background-image: url(https://images.unsplash.com/photo-1432847712612-926caafaa802?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&w=1000&q=80);
-  padding: 41px 40px;
-  position: center;
-  text-align: center;
-  display: flex;
-  
-  @media (max-width: 1300px){
-     flex-direction: column;
-     width: 550px;
-    }
+  margin-bottom: 40px;
+  // @media (max-width: 1300px){
+  //    flex-direction: column;
+  //    width: 550px;
+  //   }
   
 `;
 
 const StyledMainWrapper = styled.div`
   display: flex;
-  width: 100%;
   
-  @media (max-width: 1300px){
-     flex-direction: column;
-    }
+  // @media (max-width: 1300px){
+  //    flex-direction: column;
+  //   }
 `;
 
-const StyledMainPage = styled.div`
-  padding: 0 0;
-  width: 100%;
-  @media (max-width: 1300px){
-     flex-direction: column;
-     margin-right: 30px;
-     width: border-box;
-    }
+const StyledMainPage = styled.div`  
+  // padding: 0 0;
+  // width: 100%;
+  // @media (max-width: 1300px){
+  //    flex-direction: column;
+  //    margin-right: 30px;
+  //    width: border-box;
+  //   }
 `;
 
 export default Main;

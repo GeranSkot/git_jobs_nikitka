@@ -29,15 +29,15 @@ const JobPage = () => {
                 <Link to="/" className="back-to-search">
                     &larr;&nbsp;&nbsp; Back to search
                 </Link>
-
                 <StyledLabel>How to apply</StyledLabel>
-                <HowTo/>
+                <StyledHowTo>
+                    <HowTo/>
+                </StyledHowTo>
             </StyledHowToWrapper>
 
             <StyledJobWrapper>
                 <StyledTop>
                     <h2>{job.title}</h2>
-
                     <button type="button">
                         {job.type}
                     </button>
@@ -46,7 +46,6 @@ const JobPage = () => {
                     <FontAwesomeIcon icon={faClock}/>
                     {job.created_at.split(" ").join(" ")}
                 </StyledGrayLabel>
-
                 <StyledCompanyInfo>
                     <StyledFlex>
                         <StyledLogo>
@@ -57,7 +56,6 @@ const JobPage = () => {
                                 width="42px"
                             />
                         </StyledLogo>
-
                         <StyledInfo>
                             <p>{job.company}</p>
                             <StyledGrayLabel>
@@ -76,155 +74,160 @@ const JobPage = () => {
 };
 
 const StyledJobPageWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 30px;
+   display: flex;
+   flex-direction: row;
+   margin-top: 30px;
 
-  @media (max-width: 1300px){
-     display: flex;
-     flex-direction: column;
-     width: 550px;
-    }
+   @media (max-width: 1300px){
+      display: flex;
+      flex-direction: column;
+      width: 550px;
+     }
 `;
 
 const StyledHowToApply = styled.div`
-  font-size: 1.4rem;
-      a {
-        color: #1e86ff;
-      }
+   font-size: 1.4rem;
+       a {
+         color: #1e86ff;
+       }
 `;
 
 const StyledDescription = styled.div`
-  margin-top: 30px;
-      font-weight: 400;
-      font-size: 1.6rem;
-      color: #334680;
+   margin-top: 30px;
+       font-weight: 400;
+       font-size: 1.6rem;
+       color: #334680;
 
-      ul {
-        margin: 20px;
-      }
-      @media (max-width: 1300px){
-         position: center;
-         width: 100%;
-    }
+       ul {
+         margin: 20px;
+       }
+       @media (max-width: 1300px){
+          position: center;
+          width: 100%;
+     }
 `;
 
 const StyledHowToWrapper = styled.div`
-  display: block;
-  width: 30%;
-    .back-to-search {
-      color: #1e86ff;
-      font-size: 1.4rem;
-      font-weight: 500;
-    }
+   display: block;
+   width: 300px;
+     .back-to-search {
+       color: #1e86ff;
+       font-size: 1.4rem;
+       font-weight: 500;
+     }
 `;
 
 const StyledJobWrapper = styled.div`
-  display: block;
-  width: 100%;
-    height: 600px;
-    overflow: auto;
-    margin: 0 0 0 0;
-    h2 {
-      font-size: 2.4rem;
-      color: #334680;
-      font-weight: 700;
-      margin-top: 8px;
-      text-decoration: none;
-    }
-      p {
-        font-size: 1.8rem;
-        color: #334680;
-        font-weight: 700;
-      }
-      button{
-          border: 1px;
-          border-radius: 4px;
-          font-size: 1.4rem;
-          margin: 10px 0 0 0;
-          cursor: pointer;
-          font-weight: 500;
-          opacity: 0.75;
-          color: #334680;
-          background-color: transparent;
-          padding: 5px 5px;
-      }
+   display: block;
+   width: 100%;
+     height: 600px;
+     overflow: auto;
+     margin: 0 0 0 0;
+     h2 {
+       font-size: 2.4rem;
+       color: #334680;
+       font-weight: 700;
+       margin-top: 8px;
+       text-decoration: none;
+     }
+       p {
+         font-size: 1.8rem;
+         color: #334680;
+         font-weight: 700;
+       }
+       button{
+           border: 1px;
+           border-radius: 4px;
+           font-size: 1.4rem;
+           margin: 10px 0 0 0;
+           cursor: pointer;
+           font-weight: 500;
+           opacity: 0.75;
+           color: #334680;
+           background-color: transparent;
+           padding: 5px 5px;
+       }
 `;
 
 const StyledGrayLabel = styled.div`
-  color: #b9bdcf;
-      font-size: 1.2rem;
-      margin-top: 10px;
-      i {
-        margin-right: 8.5px;
-      }
+   color: #b9bdcf;
+       font-size: 1.2rem;
+       margin-top: 10px;
+       i {
+         margin-right: 8.5px;
+       }
 `;
 
 const StyledCompanyInfo = styled.div`
-  display: block;
-      height: 42px;
-      margin-top: 30px;
-      p {
-        font-size: 1.8rem;
-        color: #334680;
-        font-weight: 700;
-      }
-      margin-right: 8vh;
+   display: block;
+       height: 42px;
+       margin-top: 30px;
+       p {
+         font-size: 1.8rem;
+         color: #334680;
+         font-weight: 700;
+       }
+       margin-right: 8vh;
 `;
 
 const StyledLogo = styled.div`
-  height: 42px;
-        width: 42px;
-        border-radius: 4px;
-        overflow: hidden;
-        margin-right: 12px;
+   height: 42px;
+         width: 42px;
+         border-radius: 4px;
+         overflow: hidden;
+         margin-right: 12px;
         
-        img {
-        object-fit: contain;
-      }
+         img {
+         object-fit: contain;
+       }
 `;
 
 const StyledFlex = styled.div`
-  display: flex;
+   display: flex;
 `;
 
 const StyledInfo = styled.div``;
 
 const StyledDescriptionWrapper = styled.div`
-    margin-top: 30px;
-          font-weight: 400;
-          font-size: 1.6rem;
-          color: #334680;
-    
-          ul {
-            margin: 20px;
-          }
+     margin-top: 30px;
+           font-weight: 400;
+           font-size: 1.6rem;
+           color: #334680;
+
+           ul {
+             margin: 20px;
+           }
 `;
 
 const StyledLabel = styled.h2`
-  text-transform: uppercase;
-    color: #b9bdcf;
-    font-size: 1.4rem;
-    padding: 15px 0;
-    user-select: none;
-    margin-top: 15px;
+   text-transform: uppercase;
+     color: #b9bdcf;
+     font-size: 1.4rem;
+     padding: 15px 0;
+     user-select: none;
+     margin-top: 15px;
 `;
 
 const StyledTop = styled.div`
-  display: flex;
-  flex-direction: row;
-  button {
-    font-size: 1.2rem;
-      background-color: transparent;
-      border: 1px solid #334680;
-      border-radius: 4px;
-      line-height: 30px;
-      padding: 0 10px;
-      margin-left: 8px;
-      color: #334680;
-      transition: all 0.1s;
-      cursor: pointer;
-  }
+   display: flex;
+   flex-direction: row;
+   button {
+     font-size: 1.2rem;
+       background-color: transparent;
+       border: 1px solid #334680;
+       border-radius: 4px;
+       line-height: 30px;
+       padding: 0 10px;
+       margin-left: 8px;
+       color: #334680;
+       transition: all 0.1s;
+       cursor: pointer;
+   }
+`;
+
+const StyledHowTo = styled.div`
+  
+  text-align: initial;
 `;
 
 export default JobPage;

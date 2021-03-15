@@ -11,21 +11,21 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   font-size: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   
-  &::-webkit-scrollbar{
-    width: 0.5rem;
-  }
-  &::-webkit-scrollbar-thumb{
-    background-color: darkgrey;
-  }
-  &::-webkit-scrollbar-track {
-    background: white;
-  }
+  // &::-webkit-scrollbar{
+  //   width: 0.5rem;
+  // }
+  // &::-webkit-scrollbar-thumb{
+  //   background-color: darkgrey;
+  // }
+  // &::-webkit-scrollbar-track {
+  //   background: white;
+  // }
   
-  @media (max-width: 1300px){
-    font-size: 75%;
-  }
+  // @media (max-width: 1300px){
+  //   font-size: 75%;
+  // }
   
 }
 

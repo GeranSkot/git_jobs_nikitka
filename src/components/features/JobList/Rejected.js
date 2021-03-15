@@ -12,24 +12,24 @@ const Rejected = () => (
     );
 
 const StyledRejected = styled.div`
-    display: block;
-    background: #1e86ff;
-      color: #fff;
-      padding: 16px;
-      margin: 100px;
-      min-width: 350px;
-      h3 {
-        margin-top: 35px;
+     display: block;
+     background: #1e86ff;
+       color: #fff;
+       padding: 16px;
+       margin: 100px;
+       min-width: 350px;
+       h3 {
+         margin-top: 35px;
         
-        a {
-          color: white;
-          font-size: 2.8rem;
-        }
-      }
+         a {
+           color: white;
+           font-size: 2.8rem;
+         }
+       }
       
-      @media(max-width: 1300px) {
-        margin: 30px;
-      }
+    //   @media(max-width: 1300px) {
+    //     margin: 30px;
+    //   }
       
 `;
 

@@ -24,112 +24,114 @@ const JobCard = ({companyLogo, company, title, type, location, created_at, id,})
                     <Link to={`/${id}`}>
                         <h2>{title}</h2>
                     </Link>
-
-                    <button type="submit">{type}</button>
                 </StyledPositionDetails>
             </StyledPositionInfo>
 
             <StyledApplicationInfo>
-                <div className="location">
-                    <FontAwesomeIcon icon={faGlobeEurope}/>
-                    {location}
-                </div>
+                <button type="submit">{type}</button>
+                <StyledAppInfo>
+                    <div className="location">
+                        <FontAwesomeIcon icon={faGlobeEurope}/>
+                        {location}
+                    </div>
 
-                <div className="created">
-                    <FontAwesomeIcon icon={faClock}/>
-                    {/* eslint-disable-next-line react/prop-types */}
-                    {created_at.join(" ")}
-                </div>
+                    <div className="created">
+                        <FontAwesomeIcon icon={faClock}/>
+                        {/* eslint-disable-next-line react/prop-types */}
+                        {created_at.join(" ")}
+                    </div>
+                </StyledAppInfo>
             </StyledApplicationInfo>
         </StyledWrapper>
     );
 };
 
 const StyledWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  background: #fff;
-  padding: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  flex-direction: column;
-  justify-content: left;
-  margin-top: 25px;
-  border-radius: 4px;
+   height: 115px;
+   width: 823px;
+   display: flex;
+   flex-direction: column;
+   background: #fff;
+   padding: 15px 15px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+   
+   border-radius: 4px;
+   margin-bottom: 32px;
 `;
 
 const StyledPositionInfo = styled.div`
-  display: flex;
-  margin-bottom: 25px;
+   display: flex;
+   height: 55px;
 `;
 
 const StyledLogo = styled.div`
-  border-radius: 4px;
-      overflow: hidden;
-      height: 90px;
-      width: 90px;
-      background: #f2f2f2;
-      color: #bdbdbd;
-      font-weight: 600;
-      font-size: 1.2rem;
-      text-align: center;
-      min-width: 90px;
-      margin-top: 0;
-      img {
-        line-height: 90px;
-        object-fit: contain;
-        height: 90px; 
-        width: 90px;
-      }
+   border-radius: 4px;
+       overflow: hidden;
+       height: 90px;
+       width: 90px;
+       background: #f2f2f2;
+       color: #bdbdbd;
+       img {
+         object-fit: contain;
+         height: 90px; 
+         width: 90px;
+       }
 `;
 
 const StyledPositionDetails = styled.div`
-  padding: 0 16px;
-      a {
-        text-decoration: none;
-      }
-      h5 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #282538;
-      }
+   padding: 0 16px;
+       a {
+         text-decoration: none;
+       }
+       h5 {
+         font-size: 1.2rem;
+         font-weight: 700;
+         color: #282538;
+       }
 
-      h2 {
-        font-size: 1.8rem;
-        color: #334680;
-        font-weight: 400;
-        margin-top: 8px;
-        text-decoration: none;
-      }
-      button{
-          border: 1px solid #334680;
-          border-radius: 4px;
-          font-size: 1.4rem;
-          margin: 10px 0 0 0;
-          cursor: pointer;
-          font-weight: 500;
-          opacity: 0.75;
-          color: #334680;
-          
-          &:hover{
-            color: #1e86ff;
-            border: 1px solid #1e86ff;
-      }
-             
-      }
+       h2 {
+         font-size: 1.8rem;
+         color: #334680;
+         font-weight: 400;
+         margin-top: 8px;
+         text-decoration: none;
+       }
 `;
 
 const StyledApplicationInfo = styled.div`
-  color: #b9bdcf;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    margin-left: 106px;
-    width: auto;
+   color: #b9bdcf;
+     font-size: 12px;
+     display: flex;
+     justify-content: space-between; 
+     margin-left: 106px;
+     i {
+       margin-right: 8.5px;
+     }
+     button{
+           border: 1px solid #334680;
+           border-radius: 4px;
+           padding: 4px 6px;
+           font-size: 14px;
+           cursor: pointer;
+           font-weight: 700;
+           opacity: 0.75;
+           color: #334680;
+           background-color: #fff;
+           &:hover{
+             color: #1e86ff;
+             border: 1px solid #1e86ff;
+           }      
+       }
+     .created{
+      padding-left: 28.5px;
+     }     
+`;
 
-    i {
-      margin-right: 8.5px;
-    }
+const StyledAppInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  
 `;
 
 

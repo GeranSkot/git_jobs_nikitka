@@ -16,16 +16,15 @@ const Choice = ({onLocationUpdate, value, label}) => (
     );
 
 const StyledChoice = styled.div`
-  margin-top: 25px;
-  label {
-  padding-left: 0.5rem;
-        align-items: center;
-        margin-bottom: 18px;
-        font-size: 1.4rem;
-        color: #334680;
-        font-weight: 500;
-        cursor: pointer;
-        font-style: normal;
-      }    
+   margin-top: 15px;
+   label {
+   padding-left: 15.5px;
+         align-items: center;
+         margin-bottom: 18px;
+         font-size: 14px;
+         color: #334680;
+         font-weight: 500;
+         cursor: pointer;
+       }    
 `;
 export default Choice;
