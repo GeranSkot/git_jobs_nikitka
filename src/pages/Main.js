@@ -56,6 +56,8 @@ const StyledInputWrapper = styled.div`
   border-radius: 8px;
   background-image: url(https://images.unsplash.com/photo-1432847712612-926caafaa802?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&w=1000&q=80);
   margin-bottom: 40px;
+  width: 1200px;
+  
   // @media (max-width: 1300px){
   //    flex-direction: column;
   //    width: 550px;
