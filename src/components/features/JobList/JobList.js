@@ -93,7 +93,7 @@ const JobList = ({
 const StyledJobList = styled.div`
     display: block;
     //background-color: aqua;
-    width: 830px;
+    width: 750px;
     // display: flex;
     // width: 100%;
     // padding: 20px 0;

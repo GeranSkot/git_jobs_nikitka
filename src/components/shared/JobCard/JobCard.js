@@ -48,7 +48,7 @@ const JobCard = ({companyLogo, company, title, type, location, created_at, id,})
 
 const StyledWrapper = styled.div`
    height: 115px;
-   width: 823px;
+   //width: 753px;
    display: flex;
    flex-direction: column;
    background: #fff;
